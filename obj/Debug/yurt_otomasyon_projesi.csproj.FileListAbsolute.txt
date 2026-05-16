@@ -1,0 +1,16 @@
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\bin\Debug\yurt_otomasyon_projesi.exe.config
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\bin\Debug\yurt_otomasyon_projesi.exe
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\bin\Debug\yurt_otomasyon_projesi.pdb
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\bin\Debug\EntityFramework.dll
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\bin\Debug\EntityFramework.xml
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug\yurt_otomasyon_projesi.csproj.AssemblyReference.cache
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug\yurt_otomasyon_projesi.Form1.resources
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug\yurt_otomasyon_projesi.Properties.Resources.resources
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug\yurt_otomasyon_projesi.csproj.GenerateResource.cache
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug\yurt_otomasyon_projesi.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug\yurt_oto.C65E1C95.Up2Date
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug\yurt_otomasyon_projesi.exe
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug\yurt_otomasyon_projesi.pdb
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug\yurt_otomasyon_projesi.exe.config
