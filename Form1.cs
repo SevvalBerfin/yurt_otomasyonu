@@ -104,5 +104,86 @@ namespace yurt_otomasyon_projesi
                 MessageBox.Show($"Hata={ex.Message}");
             }
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >=0)
+            {
+                txt_isim.Text = dataGridView1.Rows[e.RowIndex].Cells["student_name"].Value.ToString();
+                txt_soyisim.Text = dataGridView1.Rows[e.RowIndex].Cells["student_surname"].Value.ToString();
+                txt_tc.Text = dataGridView1.Rows[e.RowIndex].Cells["student_tc"].Value.ToString();
+                txt_mail.Text = dataGridView1.Rows[e.RowIndex].Cells["student_email"].Value.ToString();
+                txt_telefon.Text = dataGridView1.Rows[e.RowIndex].Cells["student_phone"].Value.ToString();
+            }
+        }
+
+        private void btn_guncelle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.CurrentRow != null)
+                {
+                    int selectedId = Convert.ToInt32(dataGridView1.CurrentRow.Cells["student_ıd"].Value);
+                    student student= db.students.Find(selectedId);
+                    
+                    if (student != null)
+                    {
+                        student.student_name = txt_isim.Text;
+                        student.student_surname = txt_soyisim.Text;
+                        student.student_tc= txt_tc.Text;
+                        student.student_email = txt_mail.Text;
+                        student.student_phone = txt_telefon.Text;
+
+                        db.SaveChanges();
+                        MessageBox.Show("Müşteri Güncellendi.");
+                        btn_list.PerformClick();
+                    }
+                }
+
+                {
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"Hata= {ex.Message}");
+            }
+        }
+
+        private void btn_sil_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult sonuc = MessageBox.Show (
+                    "Silmek istediğinize emin misiniz?",
+                    "Silme Onayı",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (sonuc == DialogResult.Yes)
+                {
+
+                    if (dataGridView1 != null)
+                    {
+                        int selectedId = Convert.ToInt32(dataGridView1.CurrentRow.Cells["student_ıd"].Value);
+                        student student = db.students.Find(selectedId);
+                        if (student != null)
+                        {
+                            db.students.Remove(student);
+                            db.SaveChanges();
+
+                            MessageBox.Show("Müşteri Silindi!");
+                            btn_list.PerformClick();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"Hata= {ex.Message}");
+            }
+        }
     }
 }

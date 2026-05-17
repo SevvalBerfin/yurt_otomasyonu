@@ -57,6 +57,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1210, 178);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btn_ekle
             // 
@@ -86,6 +87,7 @@
             this.btn_guncelle.TabIndex = 3;
             this.btn_guncelle.Text = "GÜNCELLE";
             this.btn_guncelle.UseVisualStyleBackColor = true;
+            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
             // btn_sil
             // 
@@ -95,6 +97,7 @@
             this.btn_sil.TabIndex = 4;
             this.btn_sil.Text = "SİL";
             this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // groupBox1
             // 
