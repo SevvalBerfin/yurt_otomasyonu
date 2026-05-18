@@ -14,3 +14,5 @@ C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug
 C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug\yurt_otomasyon_projesi.exe
 C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug\yurt_otomasyon_projesi.pdb
 C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug\yurt_otomasyon_projesi.exe.config
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug\yurt_otomasyon_projesi.Ana_Form.resources
+C:\Users\hp\source\repos\yurt_otomasyon_projesi\yurt_otomasyon_projesi\obj\Debug\yurt_otomasyon_projesi.Oda_kayit.resources

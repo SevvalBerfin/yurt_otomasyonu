@@ -185,5 +185,14 @@ namespace yurt_otomasyon_projesi
                 MessageBox.Show($"Hata= {ex.Message}");
             }
         }
+
+        private void btn_geri_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            Ana_Form ana_Form = Application.OpenForms.OfType<Ana_Form>().FirstOrDefault();
+            if (ana_Form != null)  ana_Form.Show();
+
+        }
     }
 }

@@ -15,5 +15,8 @@ namespace yurt_otomasyon_projesi
         }
 
         public DbSet<student> students { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Room> Rooms { get; set; }
+        public DbSet<Registration> Registration { get; set; }
     }
 }

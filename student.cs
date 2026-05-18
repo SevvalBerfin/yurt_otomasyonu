@@ -34,5 +34,7 @@ namespace yurt_otomasyon_projesi
         [Required]
         [MaxLength(11)]
         public string student_phone { get; set; }
+
+        public virtual ICollection<Registration> Registrations { get; set; }
     }
 }

@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_isim = new System.Windows.Forms.Label();
+            this.btn_geri = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -199,11 +200,22 @@
             this.lbl_isim.TabIndex = 0;
             this.lbl_isim.Text = "İsim:";
             // 
+            // btn_geri
+            // 
+            this.btn_geri.Location = new System.Drawing.Point(778, 440);
+            this.btn_geri.Name = "btn_geri";
+            this.btn_geri.Size = new System.Drawing.Size(96, 52);
+            this.btn_geri.TabIndex = 6;
+            this.btn_geri.Text = "Ana Sayfaya Dön";
+            this.btn_geri.UseVisualStyleBackColor = true;
+            this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1246, 607);
+            this.Controls.Add(this.btn_geri);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_sil);
             this.Controls.Add(this.btn_guncelle);
@@ -237,6 +249,7 @@
         private System.Windows.Forms.Label lbl_isim;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_telefon;
+        private System.Windows.Forms.Button btn_geri;
     }
 }
 

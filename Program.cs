@@ -16,7 +16,8 @@ namespace yurt_otomasyon_projesi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Ana_Form());
+
         }
     }
 }
