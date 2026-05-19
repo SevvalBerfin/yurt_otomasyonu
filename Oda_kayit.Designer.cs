@@ -33,22 +33,21 @@
             this.btn_ekle = new System.Windows.Forms.Button();
             this.btn_sil = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmb_ogr = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cmb_ogr = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.rdb_a = new System.Windows.Forms.RadioButton();
-            this.rdb_b = new System.Windows.Forms.RadioButton();
-            this.cmb_kat = new System.Windows.Forms.ComboBox();
             this.cmb_oda = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cmb_kat = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.num_ucrt = new System.Windows.Forms.NumericUpDown();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.cmb_block = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -84,6 +83,7 @@
             this.btn_ekle.TabIndex = 2;
             this.btn_ekle.Text = "EKLE";
             this.btn_ekle.UseVisualStyleBackColor = true;
+            this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
             // btn_sil
             // 
@@ -93,6 +93,7 @@
             this.btn_sil.TabIndex = 3;
             this.btn_sil.Text = "SİL";
             this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // groupBox1
             // 
@@ -105,6 +106,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // cmb_ogr
+            // 
+            this.cmb_ogr.FormattingEnabled = true;
+            this.cmb_ogr.Location = new System.Drawing.Point(133, 22);
+            this.cmb_ogr.Name = "cmb_ogr";
+            this.cmb_ogr.Size = new System.Drawing.Size(346, 24);
+            this.cmb_ogr.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -116,10 +125,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cmb_block);
             this.groupBox2.Controls.Add(this.cmb_oda);
             this.groupBox2.Controls.Add(this.cmb_kat);
-            this.groupBox2.Controls.Add(this.rdb_b);
-            this.groupBox2.Controls.Add(this.rdb_a);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
@@ -128,7 +136,50 @@
             this.groupBox2.Size = new System.Drawing.Size(592, 139);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Oda Bilgileri";
+            // 
+            // cmb_oda
+            // 
+            this.cmb_oda.FormattingEnabled = true;
+            this.cmb_oda.Location = new System.Drawing.Point(133, 100);
+            this.cmb_oda.Name = "cmb_oda";
+            this.cmb_oda.Size = new System.Drawing.Size(121, 24);
+            this.cmb_oda.TabIndex = 6;
+            // 
+            // cmb_kat
+            // 
+            this.cmb_kat.FormattingEnabled = true;
+            this.cmb_kat.Location = new System.Drawing.Point(133, 57);
+            this.cmb_kat.Name = "cmb_kat";
+            this.cmb_kat.Size = new System.Drawing.Size(121, 24);
+            this.cmb_kat.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 109);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Oda:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 16);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Kat:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Blok:";
             // 
             // groupBox3
             // 
@@ -143,87 +194,20 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
             // 
-            // cmb_ogr
+            // num_ucrt
             // 
-            this.cmb_ogr.FormattingEnabled = true;
-            this.cmb_ogr.Location = new System.Drawing.Point(133, 22);
-            this.cmb_ogr.Name = "cmb_ogr";
-            this.cmb_ogr.Size = new System.Drawing.Size(346, 24);
-            this.cmb_ogr.TabIndex = 1;
+            this.num_ucrt.Location = new System.Drawing.Point(133, 89);
+            this.num_ucrt.Name = "num_ucrt";
+            this.num_ucrt.Size = new System.Drawing.Size(273, 22);
+            this.num_ucrt.TabIndex = 4;
             // 
-            // label2
+            // dateTimePicker1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Blok:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 16);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Kat:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 109);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Oda:";
-            // 
-            // rdb_a
-            // 
-            this.rdb_a.AutoSize = true;
-            this.rdb_a.Location = new System.Drawing.Point(133, 17);
-            this.rdb_a.Name = "rdb_a";
-            this.rdb_a.Size = new System.Drawing.Size(37, 20);
-            this.rdb_a.TabIndex = 3;
-            this.rdb_a.TabStop = true;
-            this.rdb_a.Text = "A";
-            this.rdb_a.UseVisualStyleBackColor = true;
-            // 
-            // rdb_b
-            // 
-            this.rdb_b.AutoSize = true;
-            this.rdb_b.Location = new System.Drawing.Point(326, 16);
-            this.rdb_b.Name = "rdb_b";
-            this.rdb_b.Size = new System.Drawing.Size(37, 20);
-            this.rdb_b.TabIndex = 4;
-            this.rdb_b.TabStop = true;
-            this.rdb_b.Text = "B";
-            this.rdb_b.UseVisualStyleBackColor = true;
-            // 
-            // cmb_kat
-            // 
-            this.cmb_kat.FormattingEnabled = true;
-            this.cmb_kat.Location = new System.Drawing.Point(133, 57);
-            this.cmb_kat.Name = "cmb_kat";
-            this.cmb_kat.Size = new System.Drawing.Size(121, 24);
-            this.cmb_kat.TabIndex = 5;
-            // 
-            // cmb_oda
-            // 
-            this.cmb_oda.FormattingEnabled = true;
-            this.cmb_oda.Location = new System.Drawing.Point(133, 100);
-            this.cmb_oda.Name = "cmb_oda";
-            this.cmb_oda.Size = new System.Drawing.Size(121, 24);
-            this.cmb_oda.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 30);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 16);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Kayıt Tarihi:";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(133, 23);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(273, 22);
+            this.dateTimePicker1.TabIndex = 3;
             // 
             // label6
             // 
@@ -234,20 +218,14 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Ücret:";
             // 
-            // dateTimePicker1
+            // label5
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(133, 23);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(273, 22);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
-            // num_ucrt
-            // 
-            this.num_ucrt.Location = new System.Drawing.Point(133, 89);
-            this.num_ucrt.Name = "num_ucrt";
-            this.num_ucrt.Size = new System.Drawing.Size(273, 22);
-            this.num_ucrt.TabIndex = 4;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 16);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Kayıt Tarihi:";
             // 
             // button4
             // 
@@ -257,6 +235,14 @@
             this.button4.TabIndex = 7;
             this.button4.Text = "GÜNCELLE";
             this.button4.UseVisualStyleBackColor = true;
+            // 
+            // cmb_block
+            // 
+            this.cmb_block.FormattingEnabled = true;
+            this.cmb_block.Location = new System.Drawing.Point(133, 19);
+            this.cmb_block.Name = "cmb_block";
+            this.cmb_block.Size = new System.Drawing.Size(121, 24);
+            this.cmb_block.TabIndex = 7;
             // 
             // Oda_kayit
             // 
@@ -302,12 +288,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmb_oda;
         private System.Windows.Forms.ComboBox cmb_kat;
-        private System.Windows.Forms.RadioButton rdb_b;
-        private System.Windows.Forms.RadioButton rdb_a;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown num_ucrt;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox cmb_block;
     }
 }
